@@ -1,6 +1,7 @@
 # docker-k8s-kurs-och-cert
 Certifieringsförberedande Intern utbildning på Knowit kring Docker och Kubernetes
 
+Genomgångarna kommer att spelas in och laddas upp på gemensamt share.
 
 Genomgång:
 

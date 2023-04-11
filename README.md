@@ -121,8 +121,10 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 # Upplägget av denna kurs
 
 - Fokus på CKAD certifieringen
+- Praktiskt prov med uppgifter som man behöver lösa under 2 timmar. Open book, man har tillgång till viss dokumentation och källor
+- Godkänt vid 66%
 - https://github.com/cncf/curriculum
-
+- Självstudier - labbar och övningar
 
 ---
 
@@ -132,6 +134,8 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 - Ladda hem SSH nyckel
 - Följ instruktioner för att koppla upp mot EC2 instanserna
 - Svara på kalenderinbjudan om ni skall närvara fysiskt eller digitalt senast tisdagar innan kl. 12
+- Teamskanalen, https://teams.microsoft.com/l/channel/19%3ad55f5851ced7411896b6a631d3f7ad6c%40thread.skype/Cloud%2520native?groupId=ef514fd6-f38a-4be1-aa7c-6fed3c9d6a0d&tenantId=6735929c-9dbf-473b-9fc6-5fbdcd2c9fc4
+- GitHub, https://github.com/domcha-knowit/docker-k8s-kurs-och-cert
 
 ---
 

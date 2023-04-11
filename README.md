@@ -120,19 +120,18 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 
 # Upplägget av denna kurs
 
-
-
-
+- Fokus på CKAD certifieringen
+- https://github.com/cncf/curriculum
 
 
 ---
 
 # Till nästa genomgång
 
-- Sätta upp labmiljö på AWS - E
-- 
-
-
+- Sätta upp labmiljö på AWS - Elastic Compute 2 Instanser
+- Ladda hem SSH nyckel
+- Följ instruktioner för att koppla upp mot EC2 instanserna
+- Svara på kalenderinbjudan om ni skall närvara fysiskt eller digitalt senast tisdagar innan kl. 12
 
 ---
 

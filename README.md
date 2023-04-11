@@ -84,8 +84,23 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 
 ---
 
+# Vad är Cloud Native?
+- Cloud native är en utvecklingsapproach för att bygga, distribuera och hantera moderna applikationer i molnmiljöer. Moderna företag vill bygga mycket skalbara, flexibla och motståndskraftiga applikationer som man snabbt kan uppdatera för att möta kundernas krav. För att göra det använder de moderna verktyg och tekniker som i sig stöder applikationsutveckling på molninfrastruktur. Dessa molnbaserade teknologier stöder snabba och frekventa ändringar av applikationer utan att påverka tjänsteleveransen, vilket ger användare en innovativ konkurrensfördel.
+
+---
+
+# Cloud Native Computing Foundation (CNCF) - undergrupp till Linux Foundation
+- https://landscape.cncf.io/
+
+---
+
 # Hur skall man lära sig Docker & Kubernetes?
 - Hands on
+- Börja med de grunläggande cli kommandona för Docker och K8s från terminal
+
+---
+
+# Hur skall man lära sig Docker & Kubernetes?
 - Utvecklare/DevOps/Administratör/Säkerhet
 - Hur skall man drifta en applikation på K8s?
 - Hur skall man bygga upp ett K8s kluster?
@@ -94,9 +109,12 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 ---
 
 # Certifieringar
+- K8s and Cloud Native Associate (KCNA): grundläggande
+- Certified K8s Application Developer (CKAD): utvecklare och DevOps
+- Certified K8s Administrator: administratörer
+- Certified K8s Security: säkerhet
 
-
-
+- Openshift Learning paths - Red Hat Learning Path och Certifieringar
 
 ---
 
@@ -111,7 +129,8 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 
 # Till nästa genomgång
 
-
+- Sätta upp labmiljö på AWS - E
+- 
 
 
 

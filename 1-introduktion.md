@@ -88,8 +88,8 @@ Mentimeter - gå till https://www.menti.com/ och ange koden: 5632 8973
 # Certifieringar
 - K8s and Cloud Native Associate (KCNA): grundläggande
 - Certified K8s Application Developer (CKAD): utvecklare och DevOps
-- Certified K8s Administrator: administratörer
-- Certified K8s Security: säkerhet
+- Certified K8s Administrator (CKA): administratörer
+- Certified K8s Security (CKS): säkerhet
 
 - Openshift Learning paths - Red Hat Learning Path och Certifieringar
 

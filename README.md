@@ -70,8 +70,17 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 
 # Varför skall man lära sig Docker & Kubernetes?
 
+- Intresset och användningen av Kubernetes har exploderat
+- Teknikerna är nygamla - Docker (2013) och Kubernetes (2015)
+- Stora företag och oragnisationer har migrerat till opensource lösningar för containerorkestrering t.ex. Google, Spotify, Tinder, Airbnb, The New York Times.
 
+---
 
+# Hur mycket används container teknologi?
+- Gartner förutspår att 70% av alla organisationer kommer att köra containeriserade applikationer under 2023. Upp från cirka 30% (2019)
+- Slashdata, analysfirma inom IT, har beräknat att cirka 5,6 miljoner utvecklare använder K8s globalt, cirka 30% av backendutvecklare
+- Enlyft, analysföretag inom IT, cirka 76 000 företag använder K8s (https://enlyft.com/tech/products/kubernetes)
+- Inom segmentet virtualiseringsteknologier så har 1. K8s (37%) 2. Red Hat Openshift (8%)
 
 ---
 

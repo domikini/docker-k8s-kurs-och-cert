@@ -49,7 +49,7 @@ Genomgång:
 
 ---
 
-Mentimeter - gå till menti.com och ange koden: 8562 4187
+Mentimeter - gå till https://www.menti.com/ och ange koden: 5632 8973
 
 ---
 

@@ -85,9 +85,11 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 ---
 
 # Hur skall man lära sig Docker & Kubernetes?
-
-
-
+- Hands on
+- Utvecklare/DevOps/Administratör/Säkerhet
+- Hur skall man drifta en applikation på K8s?
+- Hur skall man bygga upp ett K8s kluster?
+- Hur skall man säkra upp ett K8s kluster?
 
 ---
 

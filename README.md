@@ -22,7 +22,7 @@ Genomgång:
 Testa att ansluta till en testserver:
 
 **Hostnamn: ec2-13-53-137-228.eu-north-1.compute.amazonaws.com**
-**Användarnamn: **ubuntu**
+**Användarnamn: ubuntu**
 Autentisering med SSH-nyckel
 
 ## För MacOS och Linux:
@@ -39,7 +39,7 @@ aws-linux-demo.pem filen behöver sparas ned. Filen går att hitta på https://k
 1. Datorer med Windows behöver ha Putty installerad. https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 aws-linux-demo.ppk filen behöver sparas ned. Filen går att hitta på https://knowit.sharepoint.com/:f:/r/sites/O365-Development/Shared%20Documents/Cloud%20native/SSH-key?csf=1&web=1&e=qbYYiW. Spara ned aws-linux-demo.ppk på valfri plats på hårddisken.
 2. Följ denna guide för att ladda den sparade aws-linux-demo.ppk nyckeln till Pageant agenten. https://www.digitalocean.com/community/tutorials/how-to-use-pageant-to-streamline-ssh-key-authentication-with-putty
-3. Följ sedan guiden för att ansluta till servern, https://mediatemple.net/community/products/dv/204404604/connect-to-ssh-using-putty-(windows). Som "Host name" använd **ec2-13-53-137-228.eu-north-1.compute.amazonaws.com** och "login as:" *ubuntu*.
+3. Följ sedan guiden för att ansluta till servern, https://mediatemple.net/community/products/dv/204404604/connect-to-ssh-using-putty-(windows). Som "Host name" använd **ec2-13-53-137-228.eu-north-1.compute.amazonaws.com** och "login as:" **ubuntu**.
 4. Det kommer visas en varning första gången du ansluter till servern. Tryck Ja på varningen.
 5. Du bör vara inloggad till servern och se bash prompten `ubuntu@ip-172-31-7-120:~$`.
 

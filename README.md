@@ -21,9 +21,9 @@ Genomgång:
 
 Testa att ansluta till en testserver:
 
-**Hostnamn: ec2-13-53-137-228.eu-north-1.compute.amazonaws.com**
-**Användarnamn: ubuntu**
-Autentisering med SSH-nyckel
+- **Hostnamn: ec2-13-53-137-228.eu-north-1.compute.amazonaws.com**
+- **Användarnamn: ubuntu**
+- Autentisering med SSH-nyckel
 
 ## För MacOS och Linux:
 Datorer med MacOS och Linux har terminalprogram förinstallerad och behöver därför inte installera något särskilt program.

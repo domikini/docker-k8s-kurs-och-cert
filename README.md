@@ -88,7 +88,6 @@ aws-linux-demo.ppk filen behöver sparas ned. Filen går att hitta på https://k
 - kill
 - sudo
 - apt update, apt upgrade, apt install
-- cmatrix
 - ping
 - exit
 

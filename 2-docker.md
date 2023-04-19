@@ -69,10 +69,10 @@ style: |
 ---
 
 # Vad är funktionaliteten i en container runtime?
-- ladda ned container image från repository
-- kontrollera livscykel av container
-- monitorera lokala systemresurser
-- dela på/isolera systemresurser till container
+- Ladda ned container image från repository
+- Kontrollera livscykel av container
+- Monitorera lokala systemresurser
+- Dela på/isolera systemresurser till container
 
 ---
 

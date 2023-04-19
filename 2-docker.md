@@ -22,20 +22,11 @@ style: |
 
 ---
 
-Mentimeter - gå till menti.com och ange koden: 8562 4187
-
----
-
-
-
----
-
 # Vad är Docker?
 
 - Containrar är som snabba och lättviktiga virtuella maskiner.
 - Docker gör det enkelt att bygga och köra våra applikationer i containrar.
 
- 
 ---
 
 # Bare metal
@@ -59,6 +50,29 @@ Mentimeter - gå till menti.com och ange koden: 8562 4187
 # VMs vs. Containers
 ![h:400px left bottom](./images/VM_arch.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![h:250px right bottom](./images/containers.png)
 
+
+---
+
+# Vad är en container runtime?
+- Container runtime, även kallat container engine, är mjukvara som kan köra containrar på en dator.
+- Docker (Dock + Worker)
+
+---
+
+# Det finns många container runtimes förutom Docker
+- containerd
+- CRI-O
+- Docker Engine
+- Mirantis Container Runtime
+- m.m...
+
+---
+
+# Vad är funktionaliteten i en container runtime?
+- ladda ned container image från repository
+- kontrollera livscykel av container
+- monitorera lokala systemresurser
+- dela på/isolera systemresurser till container
 
 ---
 
@@ -133,8 +147,12 @@ Använd kommandot `docker rmi <imageid>`
 ---
 
 
-# Tack!
+# Frågor?
 
-Mentimeter - gå till menti.com och ange koden: 2179 658 
 
 ---
+
+# Tack!
+
+
+___

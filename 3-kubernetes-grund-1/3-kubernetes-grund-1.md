@@ -119,14 +119,14 @@ https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-question
 # Kubernetes dokumentation
 - https://kubernetes.io/docs/home/
 - https://kubernetes.io/blog/
-- kubectl explain <objekt>
-- kubectl explain <objekt> --recursive
+- `kubectl explain <objekt>`
+- `kubectl explain <objekt> --recursive`
 
 ---
 
 # Kubernetes deklarativ manifest i YAML
-- kubectl get <objekt> -o yaml
-- kubectl explain <objekt> --recursive
+- `kubectl get <objekt> -o yaml`
+- `kubectl explain <objekt> --recursive`
     
 --- 
 

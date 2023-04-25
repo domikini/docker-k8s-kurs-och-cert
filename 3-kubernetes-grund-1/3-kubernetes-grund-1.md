@@ -79,7 +79,7 @@ style: |
 4. Tryck `:set nu` för att aktivera radnumrering.
 5. Tryck i för att aktivera editeringsläge. Du kommer att se -- INSERT -- i vänstra nedre hörnet.
 6. Ändra raden minikube start --insecure-registry "10.0.0.0/24" till minikube start --nodes 2 --insecure-registry "10.0.0.0/24" på rad 8.
-7. Lägg till raden source .bashrc på rad 10.
+7. Lägg till raden source /home/ubuntu/.bashrc på rad 10.
 8. Tryck på ESC för att komma ur editeringsläge. Tryck `:wq` för att spara och stänga vim.
 9. `sudo chmod +x minikube.sh`
 10. `./minikube.sh`

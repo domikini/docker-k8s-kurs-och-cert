@@ -135,6 +135,7 @@ https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-question
 - Nod
 - Pod
 - Deployment
+- Service
 
 ---
 

@@ -230,9 +230,12 @@ Använd kommandot `kubectl delete svc nginx-deploy`
 
 ---
 
-
-# Avslut och utvärdering:
-
-Mentimeter - gå till menti.com och ange koden: 2862 2580 
+# Frågor?
 
 ---
+
+# Tack!
+
+---
+
+

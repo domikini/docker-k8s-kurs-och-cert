@@ -75,14 +75,9 @@ style: |
 
 1. `cd knowit-kubernetes-kurs`
 2. `cat minikube.sh`
-3. `vim minikube.sh`
-4. Tryck `:set nu` för att aktivera radnumrering.
-5. Tryck i för att aktivera editeringsläge. Du kommer att se -- INSERT -- i vänstra nedre hörnet.
-6. Ändra raden minikube start --insecure-registry "10.0.0.0/24" till minikube start --nodes 2 --insecure-registry "10.0.0.0/24" på rad 8.
-7. Tryck på ESC för att komma ur editeringsläge. Tryck `:wq` för att spara och stänga vim.
-8. `sudo chmod +x minikube.sh`
-9. `./minikube.sh`
-10. Kör kommandot `source /home/ubuntu/.bashrc`
+3. `sudo chmod +x minikube.sh`
+4. `./minikube.sh`
+5. Kör kommandot `source /home/ubuntu/.bashrc`
 
 ---
 

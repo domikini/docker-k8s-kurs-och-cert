@@ -28,6 +28,7 @@ style: |
 - Dockerfile används för att skapa och bygga container image
 - Containerimage används för att skapa containerinstanser
 - Containerimage lagras med hjälp av lager
+- Det är lagertekniken som gör att containrar är såpass kompakta och effektiva
 
 ---
 

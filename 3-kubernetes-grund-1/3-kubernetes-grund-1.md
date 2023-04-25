@@ -124,6 +124,20 @@ https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-question
 
 ---
 
+# Kubernetes deklarativ manifest i YAML
+- kubectl get <objekt> -o yaml
+- kubectl explain <objekt> --recursive
+    
+--- 
+
+# Grundläggande objekt och begrepp i Kubernetes
+- Name space
+- Nod
+- Pod
+- Deployment
+
+---
+
 # Lista alla namespaces
 
 Använd kommandot `kubectl get ns`

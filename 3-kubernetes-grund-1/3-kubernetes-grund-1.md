@@ -77,6 +77,8 @@ style: |
 2. `cat minikube.sh`
 3. `sudo chmod +x minikube.sh`
 4. `./minikube.sh`
+5. minikube delete
+6. minikube start --nodes 2
 
 ---
 

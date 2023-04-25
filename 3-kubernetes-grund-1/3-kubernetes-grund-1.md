@@ -116,6 +116,14 @@ https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-question
 
 ---
 
+# Kubernetes dokumentation
+- https://kubernetes.io/docs/home/
+- https://kubernetes.io/blog/
+- kubectl explain <objekt>
+- kubectl explain <objekt> --recursive
+
+---
+
 # Lista alla namespaces
 
 Använd kommandot `kubectl get ns`

@@ -23,17 +23,11 @@ style: |
 
 ---
 
-Mentimeter - gå till menti.com och ange koden: 4241 7027
-
----
-
----
-
 # Vad är Docker?
 
 - Containrar är som snabba och lättviktiga virtuella maskiner.
 - Docker gör det enkelt att bygga och köra våra applikationer i containrar.
-- docker start | stop | delete
+- docker build| start | stop | delete | ps | system prune
 
 ---
 

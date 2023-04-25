@@ -64,10 +64,10 @@ style: |
 
 # Installera Minikube
 
-`cd knowit-kubernetes-kurs`
-`cat minikube.sh`
-`sudo chmod +x minikube.sh`
-`./minikube.sh`
+1. `cd knowit-kubernetes-kurs`
+2. `cat minikube.sh`
+3. `sudo chmod +x minikube.sh`
+4. `./minikube.sh`
 
 ---
 

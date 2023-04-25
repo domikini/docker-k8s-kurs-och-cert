@@ -111,15 +111,8 @@ style: |
 
 ---
 
-# DEMO
-
----
-
-# PAUS
-
----
-
-# HANDS ON
+# Hands-on övningar som vi kommer att gå igenom
+https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
 
 ---
 

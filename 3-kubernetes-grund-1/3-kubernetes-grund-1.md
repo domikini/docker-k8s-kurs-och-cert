@@ -23,6 +23,14 @@ style: |
 
 ---
 
+# Tillbakablick på 2. Docker
+
+- Dockerfile används för att skapa och bygga container image
+- Containerimage används för att skapa containerinstanser
+- Containerimage lagras med hjälp av lager
+
+---
+
 # Vad är Docker?
 
 - Containrar är som snabba och lättviktiga virtuella maskiner.

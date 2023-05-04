@@ -3,16 +3,16 @@ provider "aws" {
   region  = "eu-north-1"
 }
 
-resource "aws_instance" "domcha-minikube" {
+resource "aws_instance" "<unikt-namn>-minikube" {
   count         = var.instance_count
   ami           = "ami-0efda064d1b5e46a5"
   instance_type = var.instance_type
   key_name = "AWS linux demo"
   security_groups = ["domcha-kubelab-nodes"]
   tags = {
-    owner    = "domcha"
+    owner    = "<unikt-namn>"
     kuberole = "master"
-    Name = "domcha-minikube-${count.index + 1}"
+    Name = "<unikt-namn>-minikube-${count.index + 1}"
     Batch = "5AM"
   }
   user_data = file(var.provisioning_file)

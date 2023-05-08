@@ -1,6 +1,7 @@
 # Skapa AWS EC2 instans med terraform
 
-> :white_check_mark: **Minimum requirement**: En Kubernetes nod har minimum krav på 2 vCPU och 2 GiB RAM minne. Vi kommer vilja spinna upp minst tre noder. Så det är rekommenderat att köra minst en t3.large instans på AWS för att ha tillräckligt med minnesresurs för att göra labarna.
+> :heavy_exclamation_mark: **Minimum requirement**: En Kubernetes nod har minimum krav på 2 vCPU och 2 GiB RAM minne. Vi kommer vilja spinna upp minst tre noder. Så det är rekommenderat att köra minst en t3.large instans på AWS för att ha tillräckligt med minnesresurs för att göra labarna.
+> :heavy_exclamation_mark: **Behörighet till din AWS användare**: Du behöver lägga till din användare i en grupp som ger dig tillräckligt med behörighet för att skapa EC2 instans. Använd AWS Console och gå till IAM -> Users -> <din-användare>. Gå till fliken Groups -> Add user to groups. Markera "Admin" och tryck på "Add user to group(s)".
 
 ## Förklaring till skriptfilerna:
 - **kubernetes.tf** - Är konfigurationsfil för Terraform. Terraform CLI kommer att läsa från den här filen när man kör `terraform apply`.

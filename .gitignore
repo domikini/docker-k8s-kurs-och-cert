@@ -1,1 +1,6 @@
 /.idea/
+/setup-aws-instans/.terraform/
+/setup-aws-instans/.terraform.lock.hcl
+/setup-aws-instans/output.txt
+/setup-aws-instans/terraform.tfstate
+/setup-aws-instans/terraform.tfstate.backup

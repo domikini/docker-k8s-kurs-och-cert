@@ -23,12 +23,6 @@ style: |
 
 ---
 
-# Tillbakablick på 3. Kubernetes grund 1
-
-- 
-
----
-
 # Varför K8s?
 
 - Orkestrering

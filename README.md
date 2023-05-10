@@ -47,51 +47,52 @@ aws-linux-demo.ppk filen behöver sparas ned. Filen går att hitta på https://k
 
 | Namn         | AWS hostname                                        |
 |--------------|-----------------------------------------------------|
-| Adrian       | ec2-16-16-139-147.eu-north-1.compute.amazonaws.com  |
-| Ahmed        | ec2-13-50-247-88.eu-north-1.compute.amazonaws.com   |
-| Albin        | ec2-13-50-112-215.eu-north-1.compute.amazonaws.com  |
-| Anders       | ec2-13-48-124-177.eu-north-1.compute.amazonaws.com  |
-| Axel         | ec2-16-16-76-67.eu-north-1.compute.amazonaws.com    |
-| Azeb         | ec2-13-50-245-83.eu-north-1.compute.amazonaws.com   |
-| Aziz         | ec2-16-16-104-27.eu-north-1.compute.amazonaws.com   |
-| Björn        | ec2-16-16-219-220.eu-north-1.compute.amazonaws.com  |
-| Carl         | ec2-13-49-183-124.eu-north-1.compute.amazonaws.com  |
-| Christoffer  | ec2-16-16-91-62.eu-north-1.compute.amazonaws.com    |
-| Daniel       | ec2-16-16-100-109.eu-north-1.compute.amazonaws.com  |
-| Eddy         | ec2-13-50-100-117.eu-north-1.compute.amazonaws.com  |
-| Fiorella     | ec2-16-16-193-235.eu-north-1.compute.amazonaws.com  |
-| Fredrik      | ec2-13-48-49-60.eu-north-1.compute.amazonaws.com    |
-| Gunnar C     | ec2-16-171-67-177.eu-north-1.compute.amazonaws.com  |
-| Gunnar N     | ec2-16-16-219-57.eu-north-1.compute.amazonaws.com   |
-| Hassan       | ec2-16-16-198-184.eu-north-1.compute.amazonaws.com  |
-| Johan        | ec2-13-50-232-114.eu-north-1.compute.amazonaws.com  |
-| Kate         | ec2-16-16-212-107.eu-north-1.compute.amazonaws.com  |
-| Konstantinos | ec2-13-48-128-135.eu-north-1.compute.amazonaws.com  |
-| Linn H       | ec2-16-16-169-95.eu-north-1.compute.amazonaws.com   |
-| Linn M       | ec2-13-53-235-109.eu-north-1.compute.amazonaws.com  |
-| Louise       | ec2-16-16-100-9.eu-north-1.compute.amazonaws.com    |
-| Magnus       | ec2-16-170-207-83.eu-north-1.compute.amazonaws.com  |
-| Marcus K     | ec2-13-50-248-241.eu-north-1.compute.amazonaws.com  |
-| Marcus O     | ec2-13-50-224-229.eu-north-1.compute.amazonaws.com  |
-| Marcus W     | ec2-13-53-46-57.eu-north-1.compute.amazonaws.com    |
-| Martin H     | ec2-13-53-186-91.eu-north-1.compute.amazonaws.com   |
-| Martin S     | ec2-13-48-204-59.eu-north-1.compute.amazonaws.com   |
-| Masih        | ec2-13-53-217-254.eu-north-1.compute.amazonaws.com  |
-| Mikael       | ec2-13-50-112-153.eu-north-1.compute.amazonaws.com  |
-| Mohamed      | ec2-13-49-102-88.eu-north-1.compute.amazonaws.com   |
-| Niklas       | ec2-16-16-210-24.eu-north-1.compute.amazonaws.com   |
-| Per          | ec2-13-49-134-231.eu-north-1.compute.amazonaws.com  |
-| Robin        | ec2-13-48-204-243.eu-north-1.compute.amazonaws.com  |
-| Stefan       | ec2-16-16-141-253.eu-north-1.compute.amazonaws.com  |
-| Suleiman     | ec2-16-16-144-212.eu-north-1.compute.amazonaws.com  |
-| Torsten      | ec2-13-50-231-90.eu-north-1.compute.amazonaws.com   |
-| Wille        | ec2-16-16-173-224.eu-north-1.compute.amazonaws.com  |
-| Zacharias    | ec2-16-16-120-234.eu-north-1.compute.amazonaws.com  |
-| Extra 1      | ec2-13-49-41-202.eu-north-1.compute.amazonaws.com   |
-| Extra 2      | ec2-16-16-179-169.eu-north-1.compute.amazonaws.com  |
-| Extra 3      | ec2-13-53-143-99.eu-north-1.compute.amazonaws.com   |
-| Extra 4      | ec2-16-16-195-224.eu-north-1.compute.amazonaws.com  |
-| Extra 5      | ec2-16-170-209-172.eu-north-1.compute.amazonaws.com |
+| Adrian       | ec2-16-170-201-6.eu-north-1.compute.amazonaws.com   |
+| Ahmed        | ec2-13-51-150-94.eu-north-1.compute.amazonaws.com   |
+| Albin        | ec2-16-171-22-107.eu-north-1.compute.amazonaws.com  |
+| Anders       | ec2-13-51-196-51.eu-north-1.compute.amazonaws.com   |
+| Axel         | ec2-13-48-147-0.eu-north-1.compute.amazonaws.com    |
+| Azeb         | ec2-13-51-196-197.eu-north-1.compute.amazonaws.com  |
+| Aziz         | ec2-13-53-200-180.eu-north-1.compute.amazonaws.com  |
+| Björn        | ec2-13-48-195-92.eu-north-1.compute.amazonaws.com   |
+| Carl         | ec2-16-171-10-217.eu-north-1.compute.amazonaws.com  |
+| Christoffer  | ec2-16-170-241-8.eu-north-1.compute.amazonaws.com   |
+| Daniel       | ec2-13-49-145-251.eu-north-1.compute.amazonaws.com  |
+| Eddy         | ec2-13-48-248-105.eu-north-1.compute.amazonaws.com  |
+| Fiorella     | ec2-16-170-228-244.eu-north-1.compute.amazonaws.com |
+| Fredrik      | ec2-16-171-18-69.eu-north-1.compute.amazonaws.com   |
+| Gunnar C     | ec2-13-48-46-26.eu-north-1.compute.amazonaws.com    |
+| Gunnar N     | ec2-13-53-113-173.eu-north-1.compute.amazonaws.com  |
+| Hassan       | ec2-13-49-67-93.eu-north-1.compute.amazonaws.com    |
+| Johan        | ec2-13-51-146-136.eu-north-1.compute.amazonaws.com  |
+| Kate         | ec2-13-48-136-158.eu-north-1.compute.amazonaws.com  |
+| Konstantinos | ec2-16-171-15-64.eu-north-1.compute.amazonaws.com   |
+| Linn H       | ec2-16-170-232-89.eu-north-1.compute.amazonaws.com  |
+| Linn M       | ec2-13-49-230-95.eu-north-1.compute.amazonaws.com   |
+| Louise       | ec2-16-171-39-71.eu-north-1.compute.amazonaws.com   |
+| Magnus       | ec2-13-49-238-72.eu-north-1.compute.amazonaws.com   |
+| Marcus K     | ec2-13-53-205-236.eu-north-1.compute.amazonaws.com  |
+| Marcus O     | ec2-13-51-199-139.eu-north-1.compute.amazonaws.com  |
+| Marcus W     | ec2-13-53-71-247.eu-north-1.compute.amazonaws.com   |
+| Martin H     | ec2-16-170-248-75.eu-north-1.compute.amazonaws.com  |
+| Martin S     | ec2-16-170-243-105.eu-north-1.compute.amazonaws.com |
+| Masih        | ec2-16-170-245-91.eu-north-1.compute.amazonaws.com  |
+| Mikael       | ec2-16-171-22-170.eu-north-1.compute.amazonaws.com  |
+| Mohamed      | ec2-13-53-134-250.eu-north-1.compute.amazonaws.com  |
+| Niklas       | ec2-16-170-232-46.eu-north-1.compute.amazonaws.com  |
+| Per          | ec2-13-48-136-30.eu-north-1.compute.amazonaws.com   |
+| Robin        | ec2-16-171-1-205.eu-north-1.compute.amazonaws.com   |
+| Stefan       | ec2-16-170-242-154.eu-north-1.compute.amazonaws.com |
+| Suleiman     | ec2-13-51-158-206.eu-north-1.compute.amazonaws.com  |
+| Torsten      | ec2-16-171-8-104.eu-north-1.compute.amazonaws.com   |
+| Wille        | ec2-13-48-148-83.eu-north-1.compute.amazonaws.com   |
+| Zacharias    | ec2-16-170-248-231.eu-north-1.compute.amazonaws.com |
+| Extra 1      | ec2-16-170-240-118.eu-north-1.compute.amazonaws.com |
+| Extra 2      | ec2-13-53-40-140.eu-north-1.compute.amazonaws.com   |
+| Extra 3      | ec2-16-170-236-164.eu-north-1.compute.amazonaws.com |
+| Extra 4      | ec2-16-170-247-210.eu-north-1.compute.amazonaws.com |
+| Extra 5      | ec2-16-170-202-216.eu-north-1.compute.amazonaws.com |
+
 
 ___
 # Grundläggande Bash kommandon att öva på:

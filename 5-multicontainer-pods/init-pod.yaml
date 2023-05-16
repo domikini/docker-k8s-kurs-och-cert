@@ -7,7 +7,7 @@ metadata:
 spec:
   initContainers:
     - name: init-container
-      image: busybox
+      image: busybox:1.28.0
       command: ['sh', '-c', 'until nslookup test-init-pod-svc; do echo waiting for test-init-pod-svc service; sleep 1; done; echo Service found!']
   containers:
     - name: nginx

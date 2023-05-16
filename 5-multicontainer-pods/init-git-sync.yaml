@@ -15,7 +15,7 @@ spec:
         - name: GIT_SYNC_REPO
           value: https://github.com/domcha-knowit/init-git-sync.git
         - name: GIT_SYNC_BRANCH
-          value: master
+          value: main
         - name: GIT_SYNC_DEPTH
           value: "1"
         - name: GIT_SYNC_DEST

@@ -2,10 +2,10 @@
 marp: true
 theme: default
 style: |
-    img[alt~="center"] {
-      display: block;
-      margin: 0 auto;
-    }
+  img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
 ---
 
 # 5. Multicontainer pods
@@ -19,11 +19,13 @@ style: |
 
 
 ```
+
 ##### presenterad av Dominic Chan, dominic.chan@knowit.se
 
 ---
 
 # Pod
+
 - En applikation paketeras till en container
 - Kubernetes kan inte köra en enskild container
 - En pod är den minsta enheten i Kubernetes
@@ -34,6 +36,7 @@ style: |
 # Varför pod?
 
 Kubernetes lägger till en rad med funktionalitet till pods t.ex.
+
 - Probes
 - Affinities
 - Policyn för omstart
@@ -42,33 +45,38 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 ---
 
 # Pod
+
 - Containrar i en pod hamnar alltid på samma nod
-![h:500px center](./images/container-pod-nod.png)
+  ![h:500px center](./images/container-pod-nod.png)
 
 ---
 
 # Pod
+
 - Containrar i en pod delar på samma nätverks-, minnes- och lagringsresurser
-![h:500px center](./images/resursdelning.png)
+  ![h:500px center](./images/resursdelning.png)
 
 ---
 
 # Single responsibility
+
 - Designprincip för mikrotjänster är att varje container har ett ansvarsområde
 - Single responsibility = fokus på en process eller ett jobb
-![h:500px center](./images/single-responsibility.png)
+  ![h:500px center](./images/single-responsibility.png)
 
 ---
 
 # Main-Helper
+
 - Oftast behöver huvudapplikationen lite hjälp
 - Bibehållen fördelning av ansvarsområde
 - Uppmuntrar återanvändning
-![h:500px center](./images/main-helper.png)
+  ![h:500px center](./images/main-helper.png)
 
 ---
 
 # Multicontainer patterns
+
 - Init pattern
 - Sidecar pattern
 - Adapter pattern
@@ -77,37 +85,44 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 ---
 
 # Init pattern
+
 - Används för att förbereda en miljö för huvudapplikationen
 - Startar och stängs ned innan huvudcontainern körs
 - Körs enbart en gång
-![h:500px center](./images/init-pattern.png)
+  ![h:500px center](./images/init-pattern.png)
 
 ---
 
 # Init pattern - Git repo
+
 - Hämta från Git repo
   ![h:500px center](./images/init-git.png)
 
 ---
 
 # Init pattern - API tillgänglighet
+
 - Invänta tillgänglighet på API
   ![h:500px center](./images/init-api.png)
 
 ---
+
 # Sidecar pattern
+
 - Init container
 - Sidecar container
 
 ---
 
 # Adapter pattern
+
 - Init container
 - Sidecar container
 
 ---
 
 # Ambassador pattern
+
 - Init container
 - Sidecar container
 
@@ -131,12 +146,14 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 ---
 
 # Imperativ metod för att skapa pod
+
 1. `kubectl run test-pod-1 --image=nginx`
 2. `kubectl get pods`
 
 ---
 
 # Deklarativ metod för att skapa pod
+
 1. `kubectl run test-pod-2 --image=nginx --dry-run=client -o yaml`
 2. `kubectl get pods`
 3. `kubectl run test-pod-2 --image=nginx --dry-run=client -o yaml > test-pod-2.yaml`
@@ -146,26 +163,36 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 ---
 
 # Skapa en pod och använd init container pattern
+
 1. `kubectl run test-init-pod --image=nginx --dry-run=client -o yaml > test-init-pod.yaml`
 2. `vim test-init-pod.yaml`
-3. Öppna https://github.com/domcha-knowit/docker-k8s-kurs-och-cert/blob/main/5-multicontainer-pods/init-pod.yaml och kopiera initContainers delen.
+3. Öppna https://github.com/domcha-knowit/docker-k8s-kurs-och-cert/blob/main/5-multicontainer-pods/init-pod.yaml och
+   kopiera initContainers delen.
 4. Spara genom att skriva `:wq!` i vim.
 5. Kör `kubectl apply -f test-init-pod.yaml`
 6. Kolla den nya poden `kubectl get pods` eller `kubectl get pods -w`
 7. Observera att den har status "Init:".
-8. Kör `kubectl logs test-init-pod -c init-container` för att kolla containers loggar. Uppmärksamma att nslookup kommandot inte hittar en service.
+8. Kör `kubectl logs test-init-pod -c init-container` för att kolla containers loggar. Uppmärksamma att nslookup
+   kommandot inte hittar en service.
 
 ---
 
 # Skapa en pod och använd init container pattern forts.
-9. En service manifest finns förberedd som heter init-pod-svc.yaml. Skapa servicen genom att köra `kubectl apply -f init-pod-svc.yaml`.
+
+9. En service manifest finns förberedd som heter init-pod-svc.yaml. Skapa servicen genom att
+   köra `kubectl apply -f init-pod-svc.yaml`.
 10. Kör `kubectl get pods`. Observera att poden har fått nytt status.
-11. Kör `kubectl logs test-init-pod -c init-container` för att kolla containers loggar. Uppmärksamma att nslookup kommandot har hittat servicen.
+11. Kör `kubectl logs test-init-pod -c init-container` för att kolla containers loggar. Uppmärksamma att nslookup
+    kommandot har hittat servicen.
 12. Kör `kubectl describe po test-init-pod` och lägg märke till init-containerns state.
 
 ---
 
-# Tack!
+# Övningar
+
+1. Skapa en pod med tre busybox containrar där en container kör kommandot “ls; sleep 3600;”, en andra container kör
+   kommandot “echo Hello World; sleep 3600;” en tredje container kör “echo this is the third container; sleep 3600”.
+   Kolla status på pod och container.
 
 ---
 

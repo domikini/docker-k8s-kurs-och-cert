@@ -109,22 +109,26 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 
 # Sidecar pattern
 
-- Init container
-- Sidecar container
+- Startar tillsammans med huvudapplikationen
+- Kör pararellt med huvudapplikationen
+  ![h:500px center](./images/sidecar-pattern.png)
 
 ---
 
 # Adapter pattern
 
-- Init container
-- Sidecar container
+- Specialanpassad sidecar pattern
+- Exempelvis för att exponera metrics till monitoreringsprogram (Prometheus)
+- För att omvandla output till önskvärt loggformat
+  ![h:500px center](./images/adapter-pattern.png)
 
 ---
 
 # Ambassador pattern
 
-- Init container
-- Sidecar container
+- Specialanpassad sidecar pattern
+- Exempelvis för att sköta förbindelse till extern tjänst (API, cache, lagring etc.)
+  ![h:500px center](./images/ambassador-pattern.png)
 
 ---
 

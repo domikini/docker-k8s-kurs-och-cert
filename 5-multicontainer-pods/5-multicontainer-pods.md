@@ -148,6 +148,20 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 # Skapa en pod och använd init container pattern
 1. `kubectl run test-init-pod --image=nginx --dry-run=client -o yaml > test-init-pod.yaml`
 2. `vim test-init-pod.yaml`
+3. Öppna https://github.com/domcha-knowit/docker-k8s-kurs-och-cert/blob/main/5-multicontainer-pods/init-pod.yaml och kopiera initContainers delen.
+4. Spara genom att skriva `:wq!` i vim.
+5. Kör `kubectl apply -f test-init-pod.yaml`
+6. Kolla den nya poden `kubectl get pods` eller `kubectl get pods -w`
+7. Observera att den har status "Init:".
+8. Kör `kubectl logs test-init-pod -c init-container` för att kolla containers loggar. Uppmärksamma att nslookup kommandot inte hittar en service.
+
+---
+
+# Skapa en pod och använd init container pattern forts.
+9. En service manifest finns förberedd som heter init-pod-svc.yaml. Skapa servicen genom att köra `kubectl apply -f init-pod-svc.yaml`.
+10. Kör `kubectl get pods`. Observera att poden har fått nytt status.
+11. Kör `kubectl logs test-init-pod -c init-container` för att kolla containers loggar. Uppmärksamma att nslookup kommandot har hittat servicen.
+12. Kör `kubectl describe po test-init-pod` och lägg märke till init-containerns state.
 
 ---
 

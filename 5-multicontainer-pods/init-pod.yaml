@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-init-pod
+  labels:
+    app: test-init-pod
+spec:
+  initContainers:
+    - name: init-container
+      image: busybox
+      command: ['sh', '-c', 'until nslookup test-init-pod-svc; do echo waiting for test-init-pod-svc service; sleep 1; done; echo Service found!']
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80

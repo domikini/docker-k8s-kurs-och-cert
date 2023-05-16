@@ -163,6 +163,7 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 3. `kubectl run test-pod-2 --image=nginx --dry-run=client -o yaml > test-pod-2.yaml`
 4. `cat test-pod-2.yaml`
 5. `kubectl apply -f test-pod-2.yaml`
+6. `kubectl delete -f test-pod-2.yaml`
 
 ---
 

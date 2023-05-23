@@ -140,7 +140,7 @@ Kubernetes lägger till en rad med funktionalitet till pods t.ex.
 
 # Installera Minikube
 
-1. `cd 4-kubernetes-grund-2`
+1. `cd 5-multicontainer-pods`
 2. `cat minikube.sh`
 3. `sudo chmod +x minikube.sh`
 4. `./minikube.sh`

@@ -115,24 +115,31 @@ style: |
 
 ---
 
-# Skapa deployment imperativt eller deklarativt
+# Skapa deployment imperativt
+
 1. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=10 --port=80`
 2. `kubectl get deployments`
 3. `kubectl delete deployment nginx-deployment`
-4. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=10 --port=80 --dry-run=client -o yaml > deployment-rollout.yaml`
-5. `vim deployment-rollout.yaml`
-6. `kubectl explain deployment.spec.strategy`
-7. `kubectl apply -f deployment-rollout.yaml`
-8. `kubectl get deployment`
-9. `kubectl get pods`
-10. `kubectl expose deployment nginx-deployment --type=NodePort`
-11. `kubectl get svc -o wide`, leta fram portnumret (börjar med siffran 3)
-12. `kubectl get ndoes -o wide`, leta fram ip-nummer till en av noderna
-13. `curl <ip-nummer-till-nod>:<portnummer>`
+
+---
+
+# Skapa deployment deklarativt
+
+1. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=10 --port=80 --dry-run=client -o yaml > deployment-rollout.yaml`
+2. `vim deployment-rollout.yaml`
+3. `kubectl explain deployment.spec.strategy`
+4. `kubectl apply -f deployment-rollout.yaml`
+5. `kubectl get deployment`
+6. `kubectl get pods`
+7. `kubectl expose deployment nginx-deployment --type=NodePort`
+8. `kubectl get svc -o wide`, leta fram portnumret (börjar med siffran 3)
+9. `kubectl get ndoes -o wide`, leta fram ip-nummer till en av noderna
+10. `curl <ip-nummer-till-nod>:<portnummer>`
 
 ---
 
 # Rolling update, rollback
+
 1. `kubectl rollout status deployment/nginx-deployment`
 2. `kubectl rollout history deployment/nginx-deployment`
 3. `kubectl annotate deployment nginx-deployment kubernetes.io/change-cause=nginx:1.23`
@@ -148,6 +155,7 @@ style: |
 ---
 
 # Rollout pause och resume
+
 1. `kubectl rollout pause deployment/nginx-deployment`
 2. `vim deployment-rollout.yaml`, lägg märke till att imagen är nginx:1.24
 3. `kubectl apply -f deployment-rollout.yaml`
@@ -160,12 +168,15 @@ style: |
 ---
 
 # Olika deploymentstrategier
+
 - Canary deployment
 - Blue and green deployment
 
 ---
 
 # Övningar
-- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från övning 36 till 79.
+
+- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från
+  övning 36 till 79.
 
 ---

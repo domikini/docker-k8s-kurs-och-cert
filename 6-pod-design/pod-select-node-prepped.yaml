@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    run: pod-select-node
+    run: pod-select-node-ssd
   name: pod-select-node-ssd
 spec:
   containers:

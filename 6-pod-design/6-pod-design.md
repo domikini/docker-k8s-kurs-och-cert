@@ -42,11 +42,13 @@ style: |
 ---
 
 # Starta pods för genomgången
-1. Kör kommandot `kubectl apply -f pods-labels.yaml`
+
+1. Kör kommandot `kubectl apply -f pods-labels-prepped.yaml`
 
 ---
 
 # Labels, selectors
+
 - Labels är key-value par som kan kopplas till Kubernetes objekt som t.ex. pods, nodes, services m.m.
 - Labels används som beskrivande attribut till objekten för att man skall kunna organisera och filtrera dem.
 - Label selector används för att gruppera, filtrera och sortera Kubernetes objekt
@@ -55,6 +57,7 @@ style: |
 ---
 
 # Labels, selector - Exempel vid get/lista objekt
+
 1. `kubectl get pods --show-labels`
 2. `kubectl run nginx-prod3 --image=nginx -l env=prod`
 3. `kubectl run nginx-prod4 --image=nginx --labels=env=prod`
@@ -67,6 +70,7 @@ style: |
 ---
 
 # Labels, selectors - Exempel vid schemaläggning av pod till specifik nod
+
 1. `kubectl get nodes --show-labels`
 2. `kubectl label node minikube-m02 disk=ssd`
 3. `kubectl get nodes -L disk`
@@ -79,7 +83,9 @@ style: |
 ---
 
 # Annotations
-- Annotations används för att lägga till beskrivningar till Kubernetes objekt som inte är till för att organisera eller filtrering.
+
+- Annotations används för att lägga till beskrivningar till Kubernetes objekt som inte är till för att organisera eller
+  filtrering.
 - Annotations består av key-value par.
 - Vissa tredje-part program använder annotations för att lägga till kopplingar till tredje-part program och plugins.
 - https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
@@ -87,6 +93,7 @@ style: |
 ---
 
 # Annotations - Exempel annotera pod
+
 - `kubectl annotate po pod-select-node-ssd disk=ssd`
 - `kubectl get pod pod-select-node-ssd -o yaml`
 - `kubectl describe pod pod-select-node-ssd`
@@ -95,12 +102,27 @@ style: |
 
 # Deployment och replicaset
 
+- En deployment är ett Kubernetes objekt och abstraktion som ger en möjlighet till deklarativ uppdateringar av
+  ReplicaSets och Pods
+- https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
+---
+
+# Deployment och replicaset
+
+- Deployment i förhållande till ReplicaSet, Pods och Service
+  ![h:500px center](./images/deployment-diagram.png)
+
+---
+
+# Skapa deployment imperativt eller deklarativt
+1. `kubectl create deployment nginx-deployment --image=nginx --replicas=4`
+2. `kubectl`
 
 ---
 
 # Rolling update, rollback
-
+- 
 
 
 ---
@@ -111,8 +133,6 @@ style: |
 ---
 
 # Övningar
-
-
 
 ---
 

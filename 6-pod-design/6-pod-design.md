@@ -116,29 +116,56 @@ style: |
 ---
 
 # Skapa deployment imperativt eller deklarativt
-1. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=4 --port=80`
+1. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=10 --port=80`
 2. `kubectl get deployments`
 3. `kubectl delete deployment nginx-deployment`
-4. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=4 --dry-run=client -o yaml > deployment-rollout.yaml`
+4. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=10 --port=80 --dry-run=client -o yaml > deployment-rollout.yaml`
 5. `vim deployment-rollout.yaml`
-6. `kubectl expose deployment nginx-deployment --type=NodePort`
-7. `kubectl get svc`
+6. `kubectl explain deployment.spec.strategy`
+7. `kubectl apply -f deployment-rollout.yaml`
+8. `kubectl get deployment`
+9. `kubectl get pods`
+10. `kubectl expose deployment nginx-deployment --type=NodePort`
+11. `kubectl get svc -o wide`, leta fram portnumret (börjar med siffran 3)
+12. `kubectl get ndoes -o wide`, leta fram ip-nummer till en av noderna
+13. `curl <ip-nummer-till-nod>:<portnummer>`
 
 ---
 
 # Rolling update, rollback
-- 
-
+1. `kubectl rollout status deployment/nginx-deployment`
+2. `kubectl rollout history deployment/nginx-deployment`
+3. `kubectl annotate deployment nginx-deployment kubernetes.io/change-cause=nginx:1.23`
+4. `kubectl rollout history deployment/nginx-deployment`
+5. `vim deployment-rollout.yaml`, byt ut imagen till nginx:1.24.
+6. `kubectl apply -f nginx-deployment.yaml`
+7. `watch -n 1 kubectl get pods`
+8. `kubectl annotate deployment nginx-deployment kubernetes.io/change-cause=nginx:1.24`
+9. `kubectl rollout history deployment/nginx-deployment`
+10. `kubectl rollout undo deployment/nginx-deployment`
+11. `kubectl rollout history deployment/nginx-deployment`
 
 ---
 
+# Rollout pause och resume
+1. `kubectl rollout pause deployment/nginx-deployment`
+2. `vim deployment-rollout.yaml`, lägg märke till att imagen är nginx:1.24
+3. `kubectl apply -f deployment-rollout.yaml`
+4. `kubectl get pods`
+5. `kubectl describe po <en-av-pod-namnen>`, lägg märke till att imagen fortfarande är kvar på nginx:1.23
+6. `kubectl rollout resume deployment/nginx-deployment`
+7. `watch -n 1 kubectl get pods`
+8. `kubectl describe po <en-av-pod-namnen>`, lägg märke till att imagen är nginx:1.24
 
+---
 
+# Olika deploymentstrategier
+- Canary deployment
+- Blue and green deployment
 
 ---
 
 # Övningar
+- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från övning 36 till 79.
 
 ---
-
-

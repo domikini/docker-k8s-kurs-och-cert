@@ -116,8 +116,13 @@ style: |
 ---
 
 # Skapa deployment imperativt eller deklarativt
-1. `kubectl create deployment nginx-deployment --image=nginx --replicas=4`
-2. `kubectl`
+1. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=4 --port=80`
+2. `kubectl get deployments`
+3. `kubectl delete deployment nginx-deployment`
+4. `kubectl create deployment nginx-deployment --image=nginx:1.23 --replicas=4 --dry-run=client -o yaml > deployment-rollout.yaml`
+5. `vim deployment-rollout.yaml`
+6. `kubectl expose deployment nginx-deployment --type=NodePort`
+7. `kubectl get svc`
 
 ---
 

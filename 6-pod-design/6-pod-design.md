@@ -36,8 +36,7 @@ style: |
 2. `cat minikube.sh`
 3. `sudo chmod +x minikube.sh`
 4. `./minikube.sh`
-5. minikube node add
-6. Kör kommandot `source /home/ubuntu/.bashrc`
+5. Kör kommandot `source /home/ubuntu/.bashrc`
 
 ---
 

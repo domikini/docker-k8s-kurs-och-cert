@@ -133,7 +133,7 @@ style: |
 6. `kubectl get pods`
 7. `kubectl expose deployment nginx-deployment --type=NodePort`
 8. `kubectl get svc -o wide`, leta fram portnumret (börjar med siffran 3)
-9. `kubectl get ndoes -o wide`, leta fram ip-nummer till en av noderna
+9. `kubectl get nodes -o wide`, leta fram ip-nummer till en av noderna
 10. `curl <ip-nummer-till-nod>:<portnummer>`
 
 ---
@@ -145,7 +145,7 @@ style: |
 3. `kubectl annotate deployment nginx-deployment kubernetes.io/change-cause=nginx:1.23`
 4. `kubectl rollout history deployment/nginx-deployment`
 5. `vim deployment-rollout.yaml`, byt ut imagen till nginx:1.24.
-6. `kubectl apply -f nginx-deployment.yaml`
+6. `kubectl apply -f deployment-rollout.yaml`
 7. `watch -n 1 kubectl get pods`
 8. `kubectl annotate deployment nginx-deployment kubernetes.io/change-cause=nginx:1.24`
 9. `kubectl rollout history deployment/nginx-deployment`

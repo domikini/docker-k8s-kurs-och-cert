@@ -76,9 +76,7 @@ style: |
 
 # Canary deployment
 
-Det är en typ av release/deployment strategi som går ut på att man gradvis släpper den nya applikationsversionen via nya
-instanser och monitorerar och jämför mot de gamla instanserna. Om fel upptäcks är det enkelt att ta bort de nya
-instanserna. I Kubernetes betyder det att man skapar upp ett fåtal nya podar som får agera "canary".
+Det är en typ av release/deployment strategi som går ut på att man gradvis släpper den nya applikationsversionen via nya instanser och monitorerar och jämför mot de gamla instanserna. Om fel upptäcks är det enkelt att ta bort de nya instanserna. I Kubernetes betyder det att man skapar upp ett fåtal nya podar som får agera "canary".
 
 ---
 
@@ -90,9 +88,7 @@ instanserna. I Kubernetes betyder det att man skapar upp ett fåtal nya podar so
 
 # Blue and green deployment
 
-Det är en typ av release/deployment strategi som går ut på att ha två identiska deployments och att man gradvis flyttar
-över trafik till den miljö som innehåller de nya applikationsversionerna. Om fel upptäckts så kan man smidigt flytta
-tillbaka till den tidigare stabila miljön.
+Det är en typ av release/deployment strategi som går ut på att ha två identiska deployments och att man gradvis flyttar över trafik till den miljö som innehåller de nya applikationsversionerna. Om fel upptäckts så kan man smidigt flytta tillbaka till den tidigare stabila miljön.
 
 ---
 

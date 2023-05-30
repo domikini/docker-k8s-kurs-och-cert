@@ -5,11 +5,11 @@ metadata:
     app: nginx-deployment
   name: nginx-deployment
 spec:
-  replicas: 4
+  replicas: 10
   selector:
     matchLabels:
       app: nginx-deployment
-  strategy: 
+  strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
@@ -20,5 +20,25 @@ spec:
         app: nginx-deployment
     spec:
       containers:
-      - image: nginx:1.23
-        name: nginx
+        - image: nginx:1.23
+          name: nginx
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nginx-deployment
+  name: nginx-deployment
+  namespace: default
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - port: 80
+  selector:
+    app: nginx-deployment
+  type: NodePort

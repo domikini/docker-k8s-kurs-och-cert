@@ -4,7 +4,7 @@
 sudo apt update -y
 
 #Install all required packages
-sudo apt install git vim unzip golang-go -y
+sudo apt install git vim unzip golang-go siege -y
 
 #Setup Docker runtime
 sudo apt update -y
@@ -17,4 +17,15 @@ newgrp docker
 
 #Clone all Github repos
 git clone https://github.com/domcha-knowit/docker-k8s-kurs-och-cert.git /home/ubuntu/docker-k8s-kurs-och-cert
+
+#Configure siege application
+sudo mkdir -p /home/ubuntu/.siege
+sudo mv /home/ubuntu/docker-k8s-kurs-och-cert/setup-aws-instans/siege.conf /home/ubuntu/.siege/
+
+#Fix ubuntu priviliges on home folder
 sudo chown -R ubuntu: /home/ubuntu
+
+
+
+
+

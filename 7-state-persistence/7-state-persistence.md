@@ -76,9 +76,29 @@ style: |
 
 # Canary deployment
 
+Det är en typ av release/deployment strategi som går ut på att man gradvis släpper den nya applikationsversionen via nya
+instanser och monitorerar och jämför mot de gamla instanserna. Om fel upptäcks är det enkelt att ta bort de nya
+instanserna. I Kubernetes betyder det att man skapar upp ett fåtal nya podar som får agera "canary".
+
+---
+
+# Canary deployment
+
+![h:500px center](./images/canary-deployment.png)
+
 ---
 
 # Blue and green deployment
+
+Det är en typ av release/deployment strategi som går ut på att ha två identiska deployments och att man gradvis flyttar
+över trafik till den miljö som innehåller de nya applikationsversionerna. Om fel upptäckts så kan man smidigt flytta
+tillbaka till den tidigare stabila miljön.
+
+---
+
+# Blue and green deployment
+
+![h:500px center](./images/blue-and-green-deployment.png)
 
 ---
 
@@ -128,13 +148,20 @@ Frikopplar datat från pods och containrar och abstraherar detaljerna kring hur 
 
 # Konfigurera dynamisk volym med Storage class
 
-- pvc-storage-class-prepped.yaml
 - https://minikube.sigs.k8s.io/docs/tutorials/volume_snapshots_and_csi/
+- `minikube addons enable volumesnapshots`
+- `minikube addons enable csi-hostpath-driver`
+- `kubectl get storageclass`
+- pvc-storage-class-prepped.yaml
+- `kubectl apply -f pvc-storage-class-prepped.yaml`
+- `kubectl get pvc`
+- `kubectl get pv`
 
 ---
 
 # Övningar
 
-- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från övningarna 96 - 104
+- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från
+  övningarna 96 - 104
 
 ---

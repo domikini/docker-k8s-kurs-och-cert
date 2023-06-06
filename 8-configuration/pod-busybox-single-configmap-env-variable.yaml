@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-configmap-as-env
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: [ "/bin/sh", "-c", "sleep 3600" ]
+      env:
+        - name: TEST_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: test-configmap-env-files
+              key: how

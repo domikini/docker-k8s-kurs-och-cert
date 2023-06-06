@@ -2,10 +2,10 @@ _---
 marp: true
 theme: default
 style: |
-  img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-  }
+img[alt~="center"] {
+display: block;
+margin: 0 auto;
+}
 ---
 
 # 8. Configuration
@@ -74,6 +74,7 @@ style: |
 
 - ConfigMaps används för att frikoppla konfiguration från containerimage och applikation
 - Används för att specificera konfigurationsparametrar som läses in av container/applikation
+- Får max vara 1 Mb stor
 - ConfigMaps kan skapas imperativt eller deklarativt
 
 ---
@@ -94,6 +95,7 @@ style: |
 
 - Secrets är lik ConfigMaps, men används specifikt för känslig eller konfidentiell data
 - Datat är Base64 enkodat, men är inte krypterad
+- Får max vara 1 Mb stor
 - Det är rekommenderat att använda externa secret store, begränsa åtkomst till secrets och kryptera lagringen av datat
 - Secret kan skapas imperativt eller deklarativt
 
@@ -122,15 +124,33 @@ style: |
 
 # Använd ConfigMap eller Secret i en Pod
 
-- 
-- 
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
+- Ladda in ConfigMap data som miljövariabel
+- Montera ConfigMap data som läsbar volym
+
+---
+
+# Använd ConfigMap eller Secret data som miljövariabel
+
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#define-a-container-environment-variable-with-data-from-a-single-configmap
+- `kubectl apply -f pod-busybox-single-configmap-env-variable.yaml`
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#configure-all-key-value-pairs-in-a-configmap-as-container-environment-variables
+- `kubectl apply -f pod-busybox-all-configmap-env-variable.yaml`
+
+---
+
+# Använd ConfigMap eller Secret data som läsbar volym
+
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#add-configmap-data-to-a-volume
+- `kubectl apply -f pod-busybox-configmap-as-volume-prepped.yaml`
 
 ---
 
 # Resources
 
 - https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
-
+- `minikube addons enable metrics-server`
+- `kubectl apply -f pod-cpu-demo-resources.yaml`
 
 ---
 

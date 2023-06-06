@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-configmap-as-volume
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: [ "/bin/sh", "-c", "sleep 3600" ]
+      volumeMounts:
+        - name: configmap-volume
+          mountPath: /etc/config
+  volumes:
+    - name: configmap-volume
+      configMap:
+        name: test-configmap-file

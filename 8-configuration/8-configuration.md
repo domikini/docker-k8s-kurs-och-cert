@@ -1,4 +1,4 @@
----
+_---
 marp: true
 theme: default
 style: |
@@ -80,6 +80,7 @@ style: |
 # ConfigMaps
 
 Skapa ConfigMap
+
 - Imperativt - `kubectl create configmap <configmap-name> <data-source>`
 - Deklarativt - från yaml manifest
 
@@ -98,8 +99,6 @@ Skapa ConfigMap
 
 # Secrets
 
-
-
 ---
 
 # Security context
@@ -116,11 +115,11 @@ Skapa ConfigMap
 
 # Resources
 
-
 ---
+
 # Övningar
 
 - https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från
-  övningarna 96 - 104
+  övningarna 105 - 131
 
----
+---_

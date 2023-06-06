@@ -74,30 +74,37 @@ style: |
 
 - ConfigMaps används för att frikoppla konfiguration från containerimage och applikation
 - Används för att specificera konfigurationsparametrar som läses in av container/applikation
-
----
-
-# ConfigMaps
-
-Skapa ConfigMap
-
-- Imperativt - `kubectl create configmap <configmap-name> <data-source>`
-- Deklarativt - från yaml manifest
+- ConfigMaps kan skapas imperativt eller deklarativt
 
 ---
 
 # ConfigMaps - imperativt
 
-`kubectl create configmap test-configmap-dir --from-file=./configmap/`
-`kubectl create configmap test-configmap-files --from-file=./configmap/game.properties --from-file=./configmap/ui.properties`
-`kubectl create configmap test-configmap-file --from-file=./configmap/game.properties`
-`kubectl create configmap test-configmap-env-file --from-env-file=./configmap/game-env-file.properties`
-`kubectl create configmap test-configmap-env-files --from-env-file=./configmap/game-env-file.properties --from-env-file=./configmap/ui-env-file.properties`
-`kubectl create configmap test-configmap-literal --from-literal=zone=prod`
+- `kubectl create configmap <configmap-namn> <källa-till-configmap>`
+- `kubectl create configmap test-configmap-dir --from-file=./configmap/`
+- `kubectl create configmap test-configmap-files --from-file=./configmap/game.properties --from-file=./configmap/ui.properties`
+- `kubectl create configmap test-configmap-file --from-file=./configmap/game.properties`
+- `kubectl create configmap test-configmap-env-file --from-env-file=./configmap/game-env-file.properties`
+- `kubectl create configmap test-configmap-env-files --from-env-file=./configmap/game-env-file.properties --from-env-file=./configmap/ui-env-file.properties`
+- `kubectl create configmap test-configmap-literal --from-literal=zone=prod`
 
 ---
 
 # Secrets
+
+- Secrets är lik ConfigMaps, men används specifikt för känslig eller konfidentiell data
+- Datat är Base64 enkodat, men är inte krypterad
+- Det är rekommenderat att använda externa secret store, begränsa åtkomst till secrets och kryptera lagringen av datat
+- Secret kan skapas imperativt eller deklarativt
+
+---
+
+# Secrets - imperativt
+
+- `kubectl create secret <typ-av-secret> <secret-namn> <källa-till-secret>`
+- `kubectl create secret generic test-secret-from-file --from-file=./configmap/game.properties`
+- `kubectl create secret generic test-secret-from-env-file --from-file=./configmap/game-env-file.properties`
+- `kubectl create secret generic test-secret-from-literal --from-literal=app=testapp`
 
 ---
 
@@ -113,7 +120,17 @@ Skapa ConfigMap
 
 ---
 
+# Använd ConfigMap eller Secret i en Pod
+
+- 
+- 
+
+---
+
 # Resources
+
+- https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
+
 
 ---
 

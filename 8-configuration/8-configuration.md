@@ -1,11 +1,11 @@
-_---
+---
 marp: true
 theme: default
 style: |
-img[alt~="center"] {
-display: block;
-margin: 0 auto;
-}
+  img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
 ---
 
 # 8. Configuration
@@ -110,17 +110,6 @@ margin: 0 auto;
 
 ---
 
-# Security context
-
-1. `kubectl apply -f pod-busybox-prepped.yaml`
-2. `kubectl exec -it busybox -- /bin/sh`
-3. `id`
-
-1. `kubectl apply -f pod-busybox-security-context-prepped.yaml`
-2. `kubectl exec -it secbusybox -- /bin/sh`
-3. `id`
-
----
 
 # Använd ConfigMap eller Secret i en Pod
 
@@ -146,11 +135,26 @@ margin: 0 auto;
 
 ---
 
+# Security context
+
+1. `kubectl apply -f pod-busybox-prepped.yaml`
+2. `kubectl exec -it busybox -- /bin/sh`
+3. `id`
+
+1. `kubectl apply -f pod-busybox-security-context-prepped.yaml`
+2. `kubectl exec -it secbusybox -- /bin/sh`
+3. `id`
+
+---
+
 # Resources
 
 - https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
 - `minikube addons enable metrics-server`
 - `kubectl apply -f pod-cpu-demo-resources.yaml`
+- `kubectl top pods`
+- `kubectl apply -f pod-memory-demo-resources.yaml`
+- `kubectl top pods`
 
 ---
 

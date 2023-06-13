@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: hello
+  name: hello
+spec:
+  containers:
+    - args:
+        - /bin/sh
+        - -c
+        - while true; do echo 'Hi I am from Alpine'; sleep 5;done
+      image: alpine
+      name: hello

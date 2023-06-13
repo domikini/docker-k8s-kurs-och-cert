@@ -11,14 +11,6 @@ spec:
       ports:
         - containerPort: 80
       livenessProbe:
-        initialDelaySeconds: 40
-        periodSeconds: 3
-        httpGet:
-          path: /
-          port: 80
-      readinessProbe:
-        initialDelaySeconds: 40
-        periodSeconds: 3
         httpGet:
           path: /
           port: 80

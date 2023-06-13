@@ -8,7 +8,7 @@ style: |
   }
 ---
 
-# 8. Configuration
+# 9. Observability
 
 ```
  _  __     _                          _            
@@ -33,105 +33,11 @@ style: |
 # Installera Minikube
 
 1. `cd docker-k8s-kurs-och-cert`
-2. `cd 8-configuration`
+2. `cd 9-observability`
 3. `cat minikube.sh`
 4. `sudo chmod +x minikube.sh`
 5. `./minikube.sh`
 6. Kör kommandot `source /home/ubuntu/.bashrc`
-
----
-
-![h:500px center](./images/yaml-compared.png)
-
----
-
-![h:500px center](./images/kubernetes-persistent-volume-subsystem.png)
-
----
-
-# Konfigurera dynamisk volym med Storage class
-
-- https://minikube.sigs.k8s.io/docs/tutorials/volume_snapshots_and_csi/
-- `minikube addons enable volumesnapshots`
-- `minikube addons enable csi-hostpath-driver`
-- `kubectl get storageclass`
-- pvc-storage-class-prepped.yaml
-- `kubectl apply -f pvc-storage-class-prepped.yaml`
-- `kubectl get pvc`
-- `kubectl get pv`
-
----
-
-# Configuration
-
-- ConfigMaps
-- Secrets
-  ![h:500px center](./images/deployment-diagram.png)
-
----
-
-# ConfigMaps
-
-- ConfigMaps används för att frikoppla konfiguration från containerimage och applikation
-- Används för att specificera konfigurationsparametrar som läses in av container/applikation
-- Får max vara 1 Mb stor
-- ConfigMaps kan skapas imperativt eller deklarativt
-
----
-
-# ConfigMaps - imperativt
-
-- `kubectl create configmap <configmap-namn> <källa-till-configmap>`
-- `kubectl create configmap test-configmap-dir --from-file=./configmap/`
-- `kubectl create configmap test-configmap-files --from-file=./configmap/game.properties --from-file=./configmap/ui.properties`
-- `kubectl create configmap test-configmap-file --from-file=./configmap/game.properties`
-- `kubectl create configmap test-configmap-env-file --from-env-file=./configmap/game-env-file.properties`
-- `kubectl create configmap test-configmap-env-files --from-env-file=./configmap/game-env-file.properties --from-env-file=./configmap/ui-env-file.properties`
-- `kubectl create configmap test-configmap-literal --from-literal=zone=prod`
-
----
-
-# Secrets
-
-- Secrets är lik ConfigMaps, men används specifikt för känslig eller konfidentiell data
-- Datat är Base64 enkodat, men är inte krypterad
-- Får max vara 1 Mb stor
-- Det är rekommenderat att använda externa secret store, begränsa åtkomst till secrets och kryptera lagringen av datat
-- Secret kan skapas imperativt eller deklarativt
-
----
-
-# Secrets - imperativt
-
-- `kubectl create secret <typ-av-secret> <secret-namn> <källa-till-secret>`
-- `kubectl create secret generic test-secret-from-file --from-file=./configmap/game.properties`
-- `kubectl create secret generic test-secret-from-env-file --from-file=./configmap/game-env-file.properties`
-- `kubectl create secret generic test-secret-from-literal --from-literal=app=testapp`
-
----
-
-
-# Använd ConfigMap eller Secret i en Pod
-
-- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
-- Ladda in ConfigMap data som miljövariabel
-- Montera ConfigMap data som läsbar volym
-
----
-
-# Använd ConfigMap eller Secret data som miljövariabel
-
-- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#define-a-container-environment-variable-with-data-from-a-single-configmap
-- `kubectl apply -f pod-busybox-single-configmap-env-variable.yaml`
-- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#configure-all-key-value-pairs-in-a-configmap-as-container-environment-variables
-- `kubectl apply -f pod-busybox-all-configmap-env-variable.yaml`
-
----
-
-# Använd ConfigMap eller Secret data som läsbar volym
-
-- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#add-configmap-data-to-a-volume
-- `kubectl apply -f pod-busybox-configmap-as-volume-prepped.yaml`
 
 ---
 
@@ -158,9 +64,28 @@ style: |
 
 ---
 
+# Probes
+
+- Liveness probe
+- Readiness probe
+- Startup probe
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes
+
+---
+
+# Felsökningskommandon
+
+- `kubectl get <objekt> -o yaml`
+- `kubectl logs <pod-namn> -c <container-namn>`
+- `kubectl logs -f <pod-namn> -c <container-namn>`
+- `kubectl describe <objekt>`
+- `kubectl get events`
+
+---
+
 # Övningar
 
 - https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552 från
-  övningarna 105 - 131
+  övningarna 132 - 143
 
 ---

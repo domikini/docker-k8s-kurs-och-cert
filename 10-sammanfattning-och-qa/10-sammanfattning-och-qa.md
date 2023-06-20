@@ -41,36 +41,81 @@ style: |
 
 ---
 
-# Certified Kubernetes Application Developer - CKAD
-- Curriculum - 
+# Jobs och Cronjobs
+- `cat job.yaml`
+- `kubectl apply -f job.yaml`
+- `cat cronjob.yaml`
+- `kubectl apply -f cronjob.yaml`
 
+---
+
+# Custom Resource Definition (CRD) och Custom Controllers
+- Kubernetes ger möjlighet att skapa egna Kubernetes objekt och kontroller
+- https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/
+
+---
+
+# Certified Kubernetes Application Developer - CKAD
+- Curriculum - https://github.com/cncf/curriculum/blob/master/CKAD_Curriculum_v1.27.pdf
 
 ---
 
 # Registrera och köpa voucher på Linux Foundation
-
+- https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/#
 
 ---
 
 # Provsimulator - killer.sh
-
+- Ingår två sessioner per voucher
+- Svårare än det riktiga certifieringsprovet
+- Fler frågor än på det riktiga provet
+- Samma miljöuppsättning som på provet
+- Man får svar på frågorna och man får tid på sig att repetera
+- https://killer.sh/faq
 
 ---
 
 # Ytterligare läromaterial, länkar och referenser
-
-
+- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
+- Pluralsight - https://app.pluralsight.com/paths/certificate/certified-kubernetes-application-developer-ckad-2023
+- Nigel Poulton
+- Dan Wahlin
 
 ---
 
 # Tips och tricks - verktyg och kommandon
 
+Lägg till i .bashrc som finns i hemkatalogen
 
+```
+alias k=kubectl                         # Finns redan förkonfigurerad
+
+export do="--dry-run=client -o yaml"    # k create deploy nginx --image=nginx $do
+
+export now="--force --grace-period 0"   # k delete pod x $now
+
+alias kn='kubectl config set-context --current --namespace ' # kn kube-system
+```
 
 ---
 
 # Tips och tricks - självaste provdagen
+- Man får enbart ha en skärm. En ultra wide skärm är en fördel
+- Ha gärna en bra extern webkamera till hands
+- Ha ett glas vatten
+- Lägg in shortcuts till kommandon i .bashrc
+- Identifiera de "stora" frågorna och gör de först
+- Notera de frågor som är "små" som du inte kan lösa direkt
+- Du behöver enbart passera 66% rätt, värt att inte fastna på en fråga
+- Det är cirka 15-17 frågor på totalt 2 timmar. Du får delpoäng om du svarar delvist rätt.
 
+---
 
+# Sammanfattning - Kubernetes länkar
+- Teams kanalen på Knowit Development -> Cloud Native
+- https://github.com/domcha-knowit/docker-k8s-kurs-och-cert
+- https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/#
+- https://trainingportal.linuxfoundation.org/learn/dashboard
+- https://killer.sh/
 
 ---

@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helloworld
+spec:
+  template: #Template används som mall för att skapa pod
+    spec:
+      containers:
+        - name: busybox #Namn på containern
+          image: busybox
+          command: ["echo","Hello from Kubernetes Job"]
+      restartPolicy: Never

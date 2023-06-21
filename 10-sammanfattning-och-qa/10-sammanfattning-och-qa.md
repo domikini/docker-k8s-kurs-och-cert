@@ -111,11 +111,25 @@ alias kn='kubectl config set-context --current --namespace ' # kn kube-system
 
 ---
 
-# Sammanfattning - Kubernetes länkar
+# Sammanfattning - Kubernetes material och länkar
 - Teams kanalen på Knowit Development -> Cloud Native
 - https://github.com/domcha-knowit/docker-k8s-kurs-och-cert
 - https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/#
 - https://trainingportal.linuxfoundation.org/learn/dashboard
 - https://killer.sh/
+
+---
+
+/ ___| | __ _  __| |
+| |  _| |/ _` |/ _` |
+| |_| | | (_| | (_| |
+\____|_|\__,_|\__,_|
+
+           _     _                                          
+_ __ ___ (_) __| |___  ___  _ __ ___  _ __ ___   __ _ _ __
+| '_ ` _ \| |/ _` / __|/ _ \| '_ ` _ \| '_ ` _ \ / _` | '__|
+| | | | | | | (_| \__ \ (_) | | | | | | | | | | | (_| | |   
+|_| |_| |_|_|\__,_|___/\___/|_| |_| |_|_| |_| |_|\__,_|_|
+
 
 ---
